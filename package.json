@@ -1,0 +1,19 @@
+{
+  "name": "example-authentication",
+  "version": "1.0.0",
+  "description": "Script to authenticate with SkySlope APIs. Please replace your credentials in the example .env file with your own valid Access Key and Access Secret.",
+  "main": "index.js",
+  "repository": "https://github.com/skyslope/example-authentication.git",
+  "author": "ebaah@skyslope.com",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "moment": "^2.29.1",
+    "node-fetch": "^2.6.1"
+  }
+}
