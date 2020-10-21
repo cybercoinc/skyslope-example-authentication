@@ -48,25 +48,20 @@ const getAuth = async () => {
 			Timestamp: timestamp,
 		},
 		body: data,
-    };
+	};
 
-    let response = null;
+	let response = null;
 
-    try {
-			response = await fetch(process.env.URL, options);
-			console.log(response.status);
-            console.log(response.statusText);
-			console.log(response);
-		} catch(error) {
-        console.log(error);
-    }
-
-    try {
-            const jsonResponse = await response.json();
-            return jsonResponse;
-    } catch(error) {
-        console.log(error);
-    }
+	try {
+		response = await fetch(process.env.URL, options);
+		console.log(response.status);
+		console.log(response.statusText);
+		// console.log(response);
+		const jsonResponse = await response.json();
+		return jsonResponse;
+	} catch (error) {
+		console.log(error);
+	}
 };
 
 module.exports = {
